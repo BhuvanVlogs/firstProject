@@ -2,10 +2,12 @@ const express = require("express");
 const port = 5000;
 const app = express();
 
-app.get('/', (req, res)=>{
-res.send("Hello World");
-})
+const userListRouter = require("./router/usetList.Router")
 
-app.listen(port, (req, res)=>{
+app.use(express.json());
+
+app.get('/', userListRouter)
+
+app.listen(port, (req, res) => {
     console.log(`Server listen on ${port}`)
 })
