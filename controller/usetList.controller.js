@@ -1,11 +1,17 @@
-
-
-const addUser = async (req, res) => {
+const userList = (req, res) => {
     try {
-        res.status(200).send("Hello World/")
+        res.status(200).send("USER LIST");
     } catch (error) {
-        res.status(400).send("Error World")
+        res.status(404).send("User Not Found!");
     }
 }
 
-module.exports = { addUser }
+const addUser = (req, res) => {
+    try {
+        res.status(200).send("ADD USER");
+    } catch (error) {
+        res.status(404).send("User Not Found!");
+    }
+}
+
+module.exports = { userList, addUser }
