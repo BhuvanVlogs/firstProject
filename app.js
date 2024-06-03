@@ -6,6 +6,7 @@ const userListRouter = require("./router/usetList.Router")
 const addUserList = require("./router/addUserList")
 
 app.use(express.json());
+app.use(express.urlencoded({ extended: true }))
 
 app.use("/list", userListRouter)
 app.use("/add", addUserList)
