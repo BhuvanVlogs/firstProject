@@ -8,7 +8,7 @@ const userList = (req, res) => {
 
 const addUser = (req, res) => {
     try {
-        res.status(200).send("After CI/Cd ADD USER");
+        res.status(200).send("Deleted CI/Cd for Testing - ADD USER");
     } catch (error) {
         res.status(404).send("User Not Found!");
     }
